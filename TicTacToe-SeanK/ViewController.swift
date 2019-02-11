@@ -58,28 +58,30 @@ class ViewController: UIViewController {
             }
            
             for winner in combos {
-                if gameState[winner[0]] != 0 && gameState[winner[0]] == gameState[winner[1]] && gameState[winner[1]] == gameState[winner[2]]  {
+                if gameState[winner[0]] != 0 && gameState[winner[0]] == gameState[winner[1]] && gameState[winner[1]] == gameState[winner[2]] || gameState[winner[0]] != 0 && gameState[winner[0]] != gameState[winner[1]] && gameState[winner[1]] != gameState[winner[2]] && count == 9 {
                     
                     
 
              active = false
                  
-                    if gameState[winner[0]] == 1 {
+                    if gameState[winner[0]] == 1 && count < 9 {
                         WinnerLbl.text = "X's Win"
+                        print("X")
 //                    } else if gameState[winner[0]] == 2 {
+                    } else if gameState[winner[0]] == 2 && count <= 8  {
+                        WinnerLbl.text = "O's Win"
+                        print("O")
+//                    } else if count == 9 && gameState[winner[0]] == 0{
+//                        WinnerLbl.text = "Draw"
+//                        print("DRAW")
                     } else {
-                        WinnerLbl.text = "0's Win"
+                        WinnerLbl.text = "Draw"
+                        print("Draw test")
                     }
-//   if count == 8 {
-//    active = false
-//                    WinnerLbl.text = "Draw"
-//                    WinnerLbl.isHidden = false
-//                    resetBtn.isHidden = false
-//
-//                }
-//
+
              WinnerLbl.isHidden = false
              resetBtn.isHidden = false
+                    count = 0
                     
 
                
