@@ -65,11 +65,11 @@ class ViewController: UIViewController {
              active = false
                  
                     if gameState[winner[0]] == 1 && count < 9 {
-                        WinnerLbl.text = "X's Win"
+                        WinnerLbl.text = "X's WIN!"
                         print("X")
 //                    } else if gameState[winner[0]] == 2 {
                     } else if gameState[winner[0]] == 2 && count <= 8  {
-                        WinnerLbl.text = "O's Win"
+                        WinnerLbl.text = "O's WIN!"
                         print("O")
 //                    } else if count == 9 && gameState[winner[0]] == 0{
 //                        WinnerLbl.text = "Draw"
